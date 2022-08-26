@@ -11,12 +11,12 @@ int main(){
     }
     for(int i=0;i<m;i++){
         for(int j=0;j<n;j++){
-            sum+=a[i][j];
+            sum+=a[j][i];
         }
         v.emplace_back(sum);
         sum =0;
     }
    for(int i=0;i<v.size();i++)
-   cout<<v[i];
+   cout<<v[i]<<" ";
    return 0;
 }
