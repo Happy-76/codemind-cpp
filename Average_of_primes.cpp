@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+using namespace std;
+bool prime(int n){
+    int e =sqrt(n);
+    if(n==1)return false;
+    for(int i=2;i<=e;i++){
+        if(n%i==0) return false;
+    }
+    return true;
+}
+int main(){
+    int n,c=0,o=0;
+    cin>>n;
+    int arr[n];
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+    }
+    for(int j=0;j<n;j++){
+        if(prime(arr[j])){
+            c++;
+            o+=arr[j];
+        }
+    }
+    float ans=(float)o/c;
+    cout<<fixed<<setprecision(2)<<ans;
+    return 0;
+}
